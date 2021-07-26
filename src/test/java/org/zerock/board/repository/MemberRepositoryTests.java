@@ -29,3 +29,4 @@ public class MemberRepositoryTests {
         });
     }
 }
+// 더미 추가.
