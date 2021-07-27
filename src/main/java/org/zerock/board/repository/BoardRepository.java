@@ -18,4 +18,7 @@ public interface BoardRepository extends JpaRepository<Board, Long> {
 
     @Query(value = "SELECT b, w, count(r) " + " FROM Board b " + " LEFT JOIN b.writer w " + " LEFT JOIN Reply r ON r.board = b " + " GROUP BY b", countQuery = "SELECT count(b) FROM Board b")
     Page<Object[]> getBoardWithReplyCount(Pageable pageable); // Data required for list screen
+
+    @Query("SELECT b, w, count(r) " + "FROM Board b LEFT JOIN b.writer w " + " LEFT OUTER JOIN Reply r ON r.board = b" + " WHERE b.bno = :bno")
+    Object getBoardByBno(@Param("bno") Long bno); // Similar to list processing, but the part using a specific post number is different.
 }
