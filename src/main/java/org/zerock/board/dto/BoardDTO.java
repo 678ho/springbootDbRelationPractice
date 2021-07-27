@@ -27,3 +27,8 @@ public class BoardDTO {
 
     private int replyCount; // 해당 게시글의 댓글 수
 }
+
+
+/*
+ BoardDTO 클래스가 BoardEntity클래스와 다른점은 Member를 참조하는 대신 화면에서 ㅍ필요한 작성자의 이메일과 이름으로 처리하고있는점.
+*/
