@@ -1,10 +1,14 @@
 package org.zerock.board.service;
 
 
+import com.querydsl.core.BooleanBuilder;
+import com.querydsl.core.types.dsl.BooleanExpression;
+import com.querydsl.jpa.JPQLQuery;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Sort;
+import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.zerock.board.dto.BoardDTO;
@@ -14,6 +18,7 @@ import org.zerock.board.entity.*;
 import org.zerock.board.repository.BoardRepository;
 import org.zerock.board.repository.ReplyRepository;
 
+import java.util.Optional;
 import java.util.function.Function;
 
 @Service
@@ -46,13 +51,8 @@ public class BoardServiceImpl implements BoardService{
 
         Function<Object[], BoardDTO> fn = (en -> entityToDTO((Board)en[0],(Member)en[1],(Long)en[2]));
 
-//        Page<Object[]> result = repository.getBoardWithReplyCount(
-//                pageRequestDTO.getPageable(Sort.by("bno").descending())  );
-        Page<Object[]> result = repository.searchPage(
-                pageRequestDTO.getType(),
-                pageRequestDTO.getKeyword(),
+        Page<Object[]> result = repository.getBoardWithReplyCount(
                 pageRequestDTO.getPageable(Sort.by("bno").descending())  );
-
 
         return new PageResultDTO<>(result, fn);
     }
