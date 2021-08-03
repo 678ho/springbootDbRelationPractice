@@ -1,5 +1,13 @@
 # SpringbootDataBasePractice
-**[]**  
+![testRead](https://user-images.githubusercontent.com/43158428/127994828-fd296253-33ba-41a3-a0fb-3f0888ed6c7d.PNG)
+![testGetBoardWithReply](https://user-images.githubusercontent.com/43158428/127994860-08452750-436e-454d-8621-9018c09cc52a.PNG)
+![testRead2](https://user-images.githubusercontent.com/43158428/127994947-8f9baa23-4476-4ff1-9cf5-558e2feb76b2.PNG)
+![testread3](https://user-images.githubusercontent.com/43158428/127994988-38efc328-711d-463e-ba82-01f9448efa2f.PNG)
+![testReadWithWriter](https://user-images.githubusercontent.com/43158428/127995001-7e9c502e-ee0c-4683-9cf8-e0cef2f7a637.PNG)
+![testRegister](https://user-images.githubusercontent.com/43158428/127995011-939bacfa-9c79-4fd0-8fbb-3056d9a47271.PNG)
+![testReply](https://user-images.githubusercontent.com/43158428/127995016-a3d51220-e831-4bc0-953d-e63f1f1cfa16.PNG)
+![testWithReplyCount](https://user-images.githubusercontent.com/43158428/127995018-a457a0d2-968e-4697-ba6b-34814f72afae.PNG)
+
 Database N:1 relation
 
 ## Getting Started / 어떻게 시작하나요?
