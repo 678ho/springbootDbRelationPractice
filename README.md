@@ -24,24 +24,22 @@ Lombok, Spring Boot DevTools, Spring Web, Thymeleaf, Spring Data JPA ( Modules )
 ```
 
 
-## Running the tests / 테스트의 실행
-
-어떻게 테스트가 이 시스템에서 돌아가는지에 대한 설명을 합니다
-
 ### 테스트는 이런 식으로 동작합니다
 
-왜 이렇게 동작하는지, 설명합니다
 
 ```
-예시
+TestInsert()는 한명의 사용자가 하나의 게시물을 등록하도록 작성. (테스트 결과는 DB를 통해서 확인)
+ReplyRepositoryTest클래스를 통해 임의의 게시글을 대상으로 댓글 추가.
+insertReply()는 300개의 댓글을 1~100사이 번호로 추가함.
+testRead1() 메서드를 실행하면 쿼리가 내부적으로 left outer join 처리 된것을 확인할수있음.
+Reply, Board @ManyToOne 관계이므로 테스트를 하면서 자동으로 조인이 처리됨.
 ```
 
 ### 테스트는 이런 식으로 작성하시면 됩니다
 
 ```
-예시
+test폴더 내에 테스트 패키지를 생성하고 테스트 코드를 추가 작성.
 ```
-
 
 
 
